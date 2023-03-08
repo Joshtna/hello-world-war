@@ -20,7 +20,7 @@ pipeline {
                // sh 'withAWS(region:"ap-northeast-1", credentials:"aws_credential") s3Upload(file:"/target/*.war", bucket:"bucketdem1", path:"${TAG_NAME}/")'
             
             //  sh 'aws s3 mb s3://buckdeploy'   
-             sh 'aws s3 cp /var/lib/jenkins/workspace/s3-demo/target/*.war s3://buckdeploy ' 
+             sh 'aws s3 cp /var/lib/jenkins/workspace/s3-demo/target/*.war s3://buckethello1 ' 
             }
         }      
     }
