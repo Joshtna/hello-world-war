@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('checkout') {
+        stage('clone') {
             steps {
                   git branch: 'master', url: 'https://github.com/Joshtna/hello-world-war.git'
             }
         }
-        stage('build&test'){
+        stage('build'){
             steps{
                 sh 'mvn --version'
                 sh 'mvn clean install'
